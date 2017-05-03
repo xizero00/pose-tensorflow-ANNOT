@@ -1,4 +1,5 @@
 # Human Pose Estimation with TensorFlow
+这是pose-tensorflow的注释加强版，便于自己理解用，欢迎提问题一起讨论，下面给出作者的信息
 
 Here you can find the implementation of the CNN-based human body part detectors,
 presented in the [DeeperCut](http://arxiv.org/abs/1605.03170) paper:

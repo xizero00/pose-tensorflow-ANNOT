@@ -133,6 +133,7 @@ for imgidx = 1:length(annolist)
         imgCrop(:,:,3) = img_sc(y1_new:y2_new, x1_new:x2_new,3);
         
         %% save image
+        % padZeros是在img_id(imgidx)之前填充几个0，保证是5位数字
         fname = [saveDir '/im' padZeros(num2str(img_id(imgidx)),5) '_' num2str(gidx) '.png'];
         imwrite(imgCrop, fname);
         

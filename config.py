@@ -10,7 +10,7 @@ import default_config
 
 cfg = default_config.cfg
 
-
+# 将配置字典a合并到b中
 def _merge_a_into_b(a, b):
     """Merge config dictionary a into config dictionary b, clobbering the
     options in b whenever they are also specified in a.
@@ -33,7 +33,7 @@ def _merge_a_into_b(a, b):
         else:
             b[k] = v
 
-
+# 从文件中读取配置，并合并
 def cfg_from_file(filename):
     """Load a config from file filename and merge it into the default options.
     """
@@ -45,7 +45,7 @@ def cfg_from_file(filename):
     logging.info("Config:\n"+pprint.pformat(cfg))
     return cfg
 
-
+# 从文件中读取配置
 def load_config(filename = "pose_cfg.yaml"):
     if 'POSE_PARAM_PATH' in os.environ:
         filename = os.environ['POSE_PARAM_PATH'] + '/' + filename

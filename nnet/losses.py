@@ -6,6 +6,8 @@ from tensorflow.python.framework import ops
 import tensorflow.contrib.losses as tf_losses
 
 
+# 定义huberloss，可以看维基百科的解释，这个loss对于离群点的回归具有鲁棒性
+# 因此对于精细化的定位可能更好，因为关节附近的点的位置极不稳定
 def huber_loss(labels, predictions, weight=1.0, k=1.0, scope=None):
     """Define a huber loss  https://en.wikipedia.org/wiki/Huber_loss
       tensor: tensor to regularize.

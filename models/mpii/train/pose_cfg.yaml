@@ -1,29 +1,47 @@
+# 处理好的数据集信息文件路径
 dataset: /path/to/dataset.mat
+# 数据集类型
 dataset_type: "mpii"
-
+# 关节小区域的大小
 pos_dist_thresh: 17
+# 全局尺度
 global_scale: 0.8452830189
+# 对尺度进行抖动
+# 抖动下界
 scale_jitter_lo: 0.85
+# 抖动上界
 scale_jitter_up: 1.15
 
+# 网络类型
 net_type: resnet_101
+# 初始参数位置
 init_weights: ../../pretrained/resnet_v1_101.ckpt
 
+# 是否开启位置精细化定位
 location_refinement: true
+# 是否对位置精细化定位采用huberloss
 locref_huber_loss: true
+# 位置精细化定位的loss的权重
 locref_loss_weight: 0.05
+# 位置精细化的标准差，不晓得怎么计算出来的
 locref_stdev: 7.2801
 
+# 是否启用中间层监督
 intermediate_supervision: true
+# 中间层监督的层（不要使用resnet-50的，因为这里的参数不合适）
 intermediate_supervision_layer: 12
 
 max_input_size: 850
+# 每个阶段学习率
 multi_step:
 - [0.005, 10000]
 - [0.02, 430000]
 - [0.002, 730000]
 - [0.001, 1030000]
+# 每隔多少次进行显示
 display_iters: 20
+# 每隔多少次保存模型
 save_iters: 60000
 
+# 是否对关节进行镜像
 mirror: true
