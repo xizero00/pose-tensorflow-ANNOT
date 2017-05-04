@@ -257,7 +257,7 @@ class PoseDataset:
     	'''
 
     	# 文件路径
-        im_file = data_item.im_path
+        im_file = self.cfg.dataset_path + '/' + data_item.im_path
         logging.debug('image %s', im_file)
         logging.debug('mirror %r', mirror)
         image = imread(im_file, mode='RGB')

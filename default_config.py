@@ -50,6 +50,8 @@ cfg.crop_pad = 0
 cfg.scoremap_dir = "test"
 # 数据集的类型
 cfg.dataset_type = "default"  # options: "default", "coco"
+# 数据集所在的目录
+cfg.dataset_path = "datasetpath"
 # 是否使用分割
 cfg.use_gt_segm = False
 # batch size的大小

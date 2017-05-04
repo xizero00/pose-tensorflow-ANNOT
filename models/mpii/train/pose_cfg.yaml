@@ -1,5 +1,6 @@
 # 处理好的数据集信息文件路径
 dataset: /path/to/dataset.mat
+dataset_path: /path/to/dataset/directory
 # 数据集类型
 dataset_type: "mpii"
 # 关节小区域的大小
